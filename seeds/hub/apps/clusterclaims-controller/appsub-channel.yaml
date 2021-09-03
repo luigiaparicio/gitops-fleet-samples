@@ -2,18 +2,18 @@
 apiVersion: v1                      
 kind: Namespace
 metadata:
-  name: ggithubcom-jnpacker-clusterclaims-controller-ns
+  name: ggithubcom-luigiaparicio-clusterclaims-controller-ns
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   annotations:
     apps.open-cluster-management.io/reconcile-rate: low
-  name: ggithubcom-jnpacker-clusterclaims-controller
-  namespace: ggithubcom-jnpacker-clusterclaims-controller-ns
+  name: ggithubcom-luigiaparicio-clusterclaims-controller
+  namespace: ggithubcom-luigiaparicio-clusterclaims-controller-ns
 spec:
   type: Git
-  pathname: 'https://github.com/jnpacker/clusterclaims-controller.git'
+  pathname: 'https://github.com/luigiaparicio/clusterclaims-controller.git'
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
@@ -27,7 +27,7 @@ metadata:
   name: clusterclaims-controller-subscription-1
   namespace: open-cluster-management
 spec:
-  channel: ggithubcom-jnpacker-clusterclaims-controller-ns/ggithubcom-jnpacker-clusterclaims-controller
+  channel: ggithubcom-luigiaparicio-clusterclaims-controller-ns/ggithubcom-luigiaparicio-clusterclaims-controller
   placement:
     placementRef:
       kind: PlacementRule

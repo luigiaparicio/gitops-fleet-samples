@@ -1,0 +1,60 @@
+
+#------------------#
+#- Mgmt Addresses -#
+#------------------#
+
+ExternalDNS : [https://noobaa-mgmt-openshift-storage.apps.ocplab.ar.bsch]
+ExternalIP  : []
+NodePorts   : [https://10.70.49.244:31590]
+InternalDNS : [https://noobaa-mgmt.openshift-storage.svc:443]
+InternalIP  : [https://172.30.162.52:443]
+PodPorts    : [https://10.130.2.212:8443]
+
+#--------------------#
+#- Mgmt Credentials -#
+#--------------------#
+
+email    : admin@noobaa.io
+password : LSYGlL7DWkf7HrGvSWFcHg==
+
+#----------------#
+#- S3 Addresses -#
+#----------------#
+
+ExternalDNS : [https://s3-openshift-storage.apps.ocplab.ar.bsch]
+ExternalIP  : []
+NodePorts   : [https://10.70.49.244:31759]
+InternalDNS : [https://s3.openshift-storage.svc:443]
+InternalIP  : [https://172.30.69.176:443]
+PodPorts    : [https://10.130.3.119:6443]
+
+#------------------#
+#- S3 Credentials -#
+#------------------#
+
+AWS_ACCESS_KEY_ID     : Mra1hliZyQdRfeXlH6ub
+AWS_SECRET_ACCESS_KEY : xQ3hQ/9S2+7U7R+npA+Q3Ic3O2cuhUOm287aLrfA
+
+#------------------#
+#- Backing Stores -#
+#------------------#
+
+NAME                           TYPE            TARGET-BUCKET          PHASE   AGE         
+noobaa-default-backing-store   pv-pool                                Ready   49h12m6s    
+quayocplab                     s3-compatible   desa-quay-quayocplab   Ready   48h54m13s   
+
+#------------------#
+#- Bucket Classes -#
+#------------------#
+
+NAME                          PLACEMENT                                      NAMESPACE-POLICY   PHASE   AGE        
+noobaa-default-bucket-class   {"tiers":[{"backingStores":["quayocplab"]}]}   null               Ready   49h12m9s   
+
+#-----------------#
+#- Bucket Claims -#
+#-----------------#
+
+NAMESPACE           NAME                              BUCKET-NAME                                          STORAGE-CLASS                 BUCKET-CLASS                  PHASE   
+openshift-storage   quay-bucket-1                     quay-bucket-1-fbdeca88-660a-4359-a070-d1145245dad0   openshift-storage.noobaa.io   noobaa-default-bucket-class   Bound   
+quay-pistola        example-registry-quay-datastore                                                        openshift-storage.noobaa.io   noobaa-default-bucket-class   Bound   
+

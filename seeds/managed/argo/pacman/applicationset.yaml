@@ -16,7 +16,7 @@ spec:
     spec:
       project: "default"
       source:
-        repoURL: https://github.com/jnpacker/application-samples.git
+        repoURL: https://github.com/luigiaparicio/application-samples.git
         targetRevision: main
         path: pacman
       destination:
@@ -38,7 +38,7 @@ spec:
   clusterReplicas: 1   # Availability choice, maximum number of clusters to provision at once
   clusterSelector:
     matchLabels:
-      'usage': 'production'
+      'usage': 'lab'
   clusterConditions:
     - type: ManagedClusterConditionAvailable
       status: "True"

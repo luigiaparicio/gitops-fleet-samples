@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: nginx
-    repoURL: 'https://github.com/jnpacker/application-samples.git'
+    repoURL: 'https://github.com/luigiaparicio/application-samples.git'
     targetRevision: HEAD
   syncPolicy:
     automated:
