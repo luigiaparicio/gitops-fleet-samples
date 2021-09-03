@@ -8,7 +8,7 @@ metadata:
     apps.open-cluster-management.io/reconcile-rate: high
 spec:
   type: GitHub
-  pathname: https://github.com/jnpacker/application-samples.git
+  pathname: https://github.com/luigiaparicio/application-samples.git
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
@@ -16,5 +16,5 @@ metadata:
   name: gitops-fleet-samples
   namespace: big-bang
 spec:
-  pathname: https://github.com/jnpacker/gitops-fleet-samples.git
+  pathname: https://github.com/luigiaparicio/gitops-fleet-samples.git
   type: Git
